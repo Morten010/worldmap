@@ -1,11 +1,14 @@
 import './App.css';
-import Info from './components/Info';
 import Map, { Marker, NavigationControl } from 'react-map-gl';
 import maplibregl from "maplibre-gl"
 import useFetch from './hooks/useFetch';
-import CustomMarker from './components/CustomMarker';
 import Geocode from "react-geocode";
+
+//components
+import Modal from './components/Modal';
+import Info from './components/Info';
 import { useState } from 'react';
+
 
 
 //geocode
@@ -14,32 +17,39 @@ Geocode.setLanguage("da");
 Geocode.setLocationType("ROOFTOP");
 
 function App() {
-  const [data, setdata] = useState(null)
+  const [showModal, setShowModal] = useState(false)
+  const [modalContent, setModalContent] = useState(null)
   const {loading, data, error} = useFetch("https://api.mediehuset.net/erasmus_worldmap/activities")
-  
-  console.log(data.items);
+
+  const handleOpen = (item) => {
+    setModalContent(item)
+    setShowModal(true)
+  }
+  const handleClose = () => {
+    setModalContent(null)
+    setShowModal(false)
+  }
 
   return (
     <div className="App">
-      <Info />
+      <Info data={data}/>
       <Map mapLib={maplibregl}
         initialViewState={{
-          longitude: 0,
-          latitude: 0,
-          zoom: 1
+          longitude: 8.90,
+          latitude: 48.78,
+          zoom: 2.5
         }}
         style={{
-          width: "50%",
+          width: "75%",
           height: "100vh"
         }}
         mapStyle={`https://api.maptiler.com/maps/dataviz/style.json?key=TzQlNDtjzgOYYQaCLylb`}
       >
-        {/* {data && sorted.map(item => (
-            <Marker latitude={item.lat} longitude={item.lng} key={item.id} onClick={() => handleModal(item)} style={{
-              cursor: "pointer"
-            }}/>
-        ))} */}
+        {data && data.map(item => (
+          <Marker longitude={Number(item.lng)} latitude={Number(item.lat)} color='#121217' onClick={() => handleOpen(item)} key={item.id}/>
+        ))}  
       </Map>
+      {showModal && <Modal item={modalContent} handleClose={handleClose} />}
     </div>
   );
 }

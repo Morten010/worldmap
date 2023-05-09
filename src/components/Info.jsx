@@ -1,10 +1,18 @@
 import React from 'react'
 
-export default function Info() {
+export default function Info({data}) {
+  
   return (
     <div className='info'>
-        <h1>info</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit veritatis id perspiciatis in? Voluptatum, quam asperiores quas illum velit nobis molestias exercitationem. Ad ab totam alias modi dolorum excepturi repudiandae.</p>
+        <h1>PRAKTIK I UDLANDET</h1>
+        {data && data.map(item => (
+          <div className="card" key={item.id}>
+            <p>{new Date().toLocaleString("da-DK", {weekday: "long", day: "numeric", month: "long", year: "numeric"})}</p>
+            <img src={item.images[0].filename} alt={item.images[0].title} />
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+          </div>
+        ))}
     </div>
   )
 }
