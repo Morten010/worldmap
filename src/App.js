@@ -38,7 +38,7 @@ function App() {
   }
   return (
     <div className="App">
-      <Info data={data}/>
+      <Info data={data} handleOpen={handleOpen}/>
       <Map mapLib={maplibregl}
         initialViewState={{
           longitude: 8.90,

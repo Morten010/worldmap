@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Info({data}) {
+export default function Info({data, handleOpen}) {
   
   return (
     <div className='info'>
@@ -10,7 +10,8 @@ export default function Info({data}) {
             <p>{new Date().toLocaleString("da-DK", {weekday: "long", day: "numeric", month: "long", year: "numeric"})}</p>
             <img src={item.images[0].filename} alt={item.images[0].title} />
             <h2>{item.title}</h2>
-            <p>{item.description}</p>
+            <p>{item.description.slice(0, 200)}...</p>
+            <button onClick={() => handleOpen(item)}>læs mere</button>
           </div>
         ))}
     </div>

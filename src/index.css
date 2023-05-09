@@ -63,10 +63,23 @@ code {
   width: 30%;
   padding: 2rem;
 }
+.info button{
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid Black;
+  padding: 0.3rem 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
 .card img{
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
+  transition: 0.3s;
+}
+.info button:hover{
+  color: #ba1f1f;
+  border-color: #ba1f1f;
 }
 
 /* scroll bar */
