@@ -42,7 +42,7 @@ function App() {
           width: "75%",
           height: "100vh"
         }}
-        mapStyle={`https://api.maptiler.com/maps/dataviz/style.json?key=TzQlNDtjzgOYYQaCLylb`}
+        mapStyle={`https://api.maptiler.com/maps/dataviz/style.json?key=${process.env.REACT_APP_SECRET_MAP}`}
       >
         {error && <p>{error}</p>}
         {data && data.map(item => (
