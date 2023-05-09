@@ -36,6 +36,8 @@ function App() {
     setModalContent(null)
     setShowModal(false)
   }
+
+  console.log(`https://api.maptiler.com/maps/dataviz/style.json?key=${process.env.REACT_APP_SECRET_MAP}`);
   return (
     <div className="App">
       <Info data={data} handleOpen={handleOpen}/>
