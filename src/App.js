@@ -2,19 +2,11 @@ import './App.css';
 import Map, { Marker } from 'react-map-gl';
 import maplibregl from "maplibre-gl"
 import useFetch from './hooks/useFetch';
-import Geocode from "react-geocode";
 
 //components
 import Modal from './components/Modal';
 import Info from './components/Info';
 import { useState } from 'react';
-
-
-
-//geocode
-Geocode.setApiKey("AIzaSyAFo2NPFepHjZpvC9KWRCY5lBtLYkHehtE");
-Geocode.setLanguage("da");
-Geocode.setLocationType("ROOFTOP");
 
 function App() {
   const [showModal, setShowModal] = useState(false)
