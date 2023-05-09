@@ -47,6 +47,11 @@ const  useFetch = (url) => {
         }
        }
 
+    setInterval(() => {
+        fetchData()
+        console.log("Successfull fetch");
+    }, 600000);
+
         //fetch data
        fetchData()
     }, [url])

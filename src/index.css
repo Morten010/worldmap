@@ -30,6 +30,8 @@ code {
   display: grid;
   place-content: center;
   z-index: 0;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 .modal-backdrop .modal{
   background-color: white;
