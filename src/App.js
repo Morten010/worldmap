@@ -37,7 +37,6 @@ function App() {
     setShowModal(false)
   }
 
-  console.log(`https://api.maptiler.com/maps/dataviz/style.json?key=${process.env.REACT_APP_SECRET_MAP}`);
   return (
     <div className="App">
       <Info data={data} handleOpen={handleOpen}/>
@@ -51,7 +50,7 @@ function App() {
           width: "75%",
           height: "100vh"
         }}
-        mapStyle={`https://api.maptiler.com/maps/dataviz/style.json?key=${process.env.REACT_APP_SECRET_MAP}`}
+        mapStyle={`https://api.maptiler.com/maps/dataviz/style.json?key=TzQlNDtjzgOYYQaCLylb`}
       >
         {error && <p>{error}</p>}
         {data && data.map(item => (
