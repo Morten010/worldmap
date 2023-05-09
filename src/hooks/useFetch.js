@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Geocode from "react-geocode";
 
-Geocode.setApiKey("AIzaSyAFo2NPFepHjZpvC9KWRCY5lBtLYkHehtE");
+Geocode.setApiKey(process.env.REACT_APP_GOOGLE_TOKEN);
 Geocode.setLanguage("da");
 Geocode.setLocationType("ROOFTOP");
 
