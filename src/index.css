@@ -75,7 +75,7 @@ code {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 .info button:hover{
   color: #ba1f1f;

@@ -2,6 +2,7 @@ import './App.css';
 import Map, { Marker } from 'react-map-gl';
 import maplibregl from "maplibre-gl"
 import useFetch from './hooks/useFetch';
+import { AnimatePresence } from 'framer-motion';
 
 //components
 import Modal from './components/Modal';
@@ -49,7 +50,9 @@ function App() {
           <Marker longitude={Number(item.lng)} latitude={Number(item.lat)} color='#ba1f1f' onClick={() => handleOpen(item)} key={item.id} style={{cursor: "pointer"}}/>
         ))}  
       </Map>
-      {showModal && <Modal item={modalContent} handleClose={handleClose}/>}
+      <AnimatePresence>
+        {showModal && <Modal item={modalContent} handleClose={handleClose}/>}
+      </AnimatePresence>
     </div>
   );
 }
