@@ -1,6 +1,6 @@
 # 🌎 World Map
 
-![https://ibb.co/KmCBxfM](https://ibb.co/KmCBxfM)
+![Website image](https://i.ibb.co/yVLKFZw/World-map.png)
 
 My project is a web application that allows users to explore my school's Erasmus trips on a map and read about each trip in detail. The app was built using MapLibre, an open-source mapping library, and React, a popular JavaScript framework for building user interfaces.
 
