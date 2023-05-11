@@ -8,6 +8,8 @@ To build this app, I used MapLibre's powerful mapping tools to create a dynamic,
 
 Overall, my Erasmus trip mapping app is a fun and informative way to explore the different places my school has traveled to for Erasmus programs. Whether you're a student, a teacher, or just curious about travel, this app is a great way to learn more about the exciting opportunities available through Erasmus.
 
+![Check it out](https://worldmap-theta.vercel.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
