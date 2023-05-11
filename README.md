@@ -1,5 +1,7 @@
 # 🌎 World Map
 
+![Website image](https://ibb.co/KmCBxfM)
+
 My project is a web application that allows users to explore my school's Erasmus trips on a map and read about each trip in detail. The app was built using MapLibre, an open-source mapping library, and React, a popular JavaScript framework for building user interfaces.
 
 Using the app, users can zoom in and out on the map to see all the different locations where our school has traveled for Erasmus programs. Each location is represented by a pin on the map, and when a user clicks on a pin, they can see more information about that specific trip, including the dates, the countries visited, and any highlights or notable experiences from the trip.
